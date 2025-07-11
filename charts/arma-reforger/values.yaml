@@ -181,7 +181,7 @@ persistence:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "hostpath"
+    storageClass: "local-path"
 
     ## A manually managed Persistent Volume and Claim
     ## Requires persistence.enabled: true
