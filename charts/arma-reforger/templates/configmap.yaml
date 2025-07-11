@@ -14,10 +14,10 @@ data:
     {
         "dedicatedServerId": {{ .Values.config.dedicatedServerID | quote }},
         "region": {{ .Values.config.region | quote }},
-        "gameHostBindAddress": {{ .Values.config.gameHostBindAddress | quote }},
-        "gameHostBindPort": {{ .Values.config.gameHostBindPort }},
-        "gameHostRegisterBindAddress": {{ .Values.config.gameHostRegisterBindAddress | quote }},
-        "gameHostRegisterPort": {{ .Values.config.gameHostRegisterBindPort }},
+        "bindAddress": {{ .Values.config.gameHostBindAddress | quote }},
+        "bindPort": {{ .Values.config.gameHostBindPort }},
+        "publicAddress": {{ .Values.config.gameHostRegisterBindAddress | quote }},
+        "publicPort": {{ .Values.config.gameHostRegisterBindPort }},
         "adminPassword": {{ include "adminPassword" . | quote }},
         "game": {
             "name": {{ .Values.config.name | quote }},
