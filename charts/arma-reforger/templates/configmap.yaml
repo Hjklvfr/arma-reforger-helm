@@ -18,7 +18,6 @@ data:
         "bindPort": {{ .Values.config.gameHostBindPort }},
         "publicAddress": {{ .Values.config.gameHostRegisterBindAddress | quote }},
         "publicPort": {{ .Values.config.gameHostRegisterBindPort }},
-        "adminPassword": {{ include "adminPassword" . | quote }},
         "game": {
             "name": {{ .Values.config.name | quote }},
             "password": {{ include "serverPassword" . | quote }},
