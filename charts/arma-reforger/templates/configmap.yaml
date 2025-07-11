@@ -18,23 +18,12 @@ data:
         "bindPort": {{ .Values.config.gameHostBindPort }},
         "publicAddress": {{ .Values.config.gameHostRegisterBindAddress | quote }},
         "publicPort": {{ .Values.config.gameHostRegisterBindPort }},
-        "game": {
-            "name": {{ .Values.config.name | quote }},
-            "password": {{ include "serverPassword" . | quote }},
-            "scenarioId": {{ .Values.config.scenarioID | quote }},
-            "playerCountLimit": {{ .Values.config.playerCountLimit }},
-            "autoJoinable": {{ .Values.config.autoJoinable }},
-            "visible": {{ .Values.config.visible }},
-            "gameProperties": {
-                "serverMaxViewDistance": {{ .Values.config.serverMaxViewDistance }},
-                "serverMinGrassDistance": {{ .Values.config.serverMinGrassDistance }},
-                "networkViewDistance": {{ .Values.config.networkViewDistance }},
-                "disableThirdPerson": {{ .Values.config.disableThirdPerson }},
-                "fastValidation": {{ .Values.config.fastvalidation }},
-                "battlEye": {{ .Values.config.battleeye }}
-            },
-            "mods": [{{ include "mods" . }}]
-        },
+        "game.name": {{ .Values.config.name | quote }},
+        "game.password": {{ include "serverPassword" . | quote }},
+        "game.passwordAdmin": {{ .Values.credentials.adminPassword | quote }},
+        "game.scenarioId": {{ .Values.config.scenarioID | quote }},
+        "game.maxPlayers": {{ .Values.config.playerCountLimit }},
+        "game.gameProperties.fastValidation": true,
         "a2sQueryEnabled": true,
         "steamQueryPort": {{ .Values.config.steamQueryPort }}
     }
