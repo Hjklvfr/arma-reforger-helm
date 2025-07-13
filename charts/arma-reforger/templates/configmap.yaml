@@ -16,7 +16,7 @@ data:
         "bindPort": 2001,
         "publicAddress": "",
         "publicPort": 32001,
-        "region": "RU",
+        "region": "EU",
         "game": {
             "name": "SIBERIA Official Scenarios",
             "password": "",
