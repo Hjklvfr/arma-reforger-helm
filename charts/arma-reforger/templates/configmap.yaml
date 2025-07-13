@@ -16,10 +16,11 @@ data:
         "bindPort": 2001,
         "publicAddress": "",
         "publicPort": 32001,
+        "region": "RU",
         "game": {
             "name": "SIBERIA Official Scenarios",
             "password": "",
-            "passwordAdmin": "",
+            "passwordAdmin": "323131",
             "scenarioId": "{DFAC5FABD11F2390}Missions/26_CombatOpsEveron.conf",
             "maxPlayers": 64,
             "visible": true,
