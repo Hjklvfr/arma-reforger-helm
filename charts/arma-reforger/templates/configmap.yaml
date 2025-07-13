@@ -12,20 +12,46 @@ metadata:
 data:
   armarserver.server.json: |-
     {
-        "dedicatedServerId": {{ .Values.config.dedicatedServerID | quote }},
-        "region": {{ .Values.config.region | quote }},
-        "bindAddress": {{ .Values.config.gameHostBindAddress | quote }},
-        "bindPort": {{ .Values.config.gameHostBindPort }},
-        "publicAddress": {{ .Values.config.gameHostRegisterBindAddress | quote }},
-        "publicPort": {{ .Values.config.gameHostRegisterBindPort }},
-        "game.name": {{ .Values.config.name | quote }},
-        "game.password": {{ include "serverPassword" . | quote }},
-        "game.passwordAdmin": {{ .Values.credentials.adminPassword | quote }},
-        "game.scenarioId": {{ .Values.config.scenarioID | quote }},
-        "game.maxPlayers": {{ .Values.config.playerCountLimit }},
-        "game.gameProperties.fastValidation": true,
-        "a2sQueryEnabled": true,
-        "steamQueryPort": {{ .Values.config.steamQueryPort }}
+        "bindAddress": "0.0.0.0",
+        "bindPort": 2001,
+        "publicAddress": "",
+        "publicPort": 2001,
+        "game": {
+            "name": "SIBERIA Official Scenarios",
+            "password": "",
+            "passwordAdmin": "",
+            "scenarioId": "{DFAC5FABD11F2390}Missions/26_CombatOpsEveron.conf",
+            "maxPlayers": 64,
+            "visible": true,
+            "crossPlatform": true,
+            "supportedPlatforms": [
+                "PLATFORM_PC",
+                "PLATFORM_XBL",
+                "PLATFORM_PSN"
+            ],
+            "modsRequiredByDefault": true,
+            "gameProperties": {
+                "serverMaxViewDistance": 5000,
+                "serverMinGrassDistance": 0,
+                "networkViewDistance": 5000,
+                "disableThirdPerson": false,
+                "fastValidation": true,
+                "battlEye": true,
+                "VONDisableUI": false,
+                "VONDisableDirectSpeechUI": false,
+                "VONCanTransmitCrossFaction": false,
+                "missionHeader": {
+                    "m_sName": "Arma Reforger Server"
+                }
+            }
+        },
+        "a2s": {
+            "address": "0.0.0.0",
+            "port": 17777
+        },
+        "operating": {
+            "disableCrashReporter": true
+        }
     }
 ---
 apiVersion: v1
