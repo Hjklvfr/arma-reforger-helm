@@ -3,6 +3,33 @@ entries:
   arma-reforger:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-07-13T07:32:22.927396553Z"
+    dependencies:
+    - condition: reloader.enabled
+      name: reloader
+      repository: https://stakater.github.io/stakater-charts
+      version: 1.0.15
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 20.0.1
+    description: A Helm chart for ARMA reforger on LinuxGSM.
+    digest: 795a4647beb29518e43637577a143c727c224f6b327165bd25755c53959aa0ae
+    icon: https://raw.githubusercontent.com/brittonhayes/arma-reforger-helm/main/.github/reforger-helm-square-logo.png
+    keywords:
+    - arma-reforger
+    - GameServers
+    - linuxgsm
+    maintainers:
+    - name: Britton Hayes
+      url: https://github.com/brittonhayes
+    name: arma-reforger
+    type: application
+    urls:
+    - https://github.com/Hjklvfr/arma-reforger-helm/releases/download/arma-reforger-0.5.10/arma-reforger-0.5.10.tgz
+    version: 0.5.10
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-07-13T07:17:07.741656117Z"
     dependencies:
     - condition: reloader.enabled
@@ -163,4 +190,4 @@ entries:
     urls:
     - https://github.com/Hjklvfr/arma-reforger-helm/releases/download/arma-reforger-0.5.4/arma-reforger-0.5.4.tgz
     version: 0.5.4
-generated: "2025-07-13T07:17:07.741681114Z"
+generated: "2025-07-13T07:32:22.927427812Z"
