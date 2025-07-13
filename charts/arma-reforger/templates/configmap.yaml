@@ -32,7 +32,6 @@ data:
             "modsRequiredByDefault": true,
             "gameProperties": {
                 "serverMaxViewDistance": 5000,
-                "serverMinGrassDistance": 0,
                 "networkViewDistance": 5000,
                 "disableThirdPerson": false,
                 "fastValidation": true,
