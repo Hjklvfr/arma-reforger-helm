@@ -15,7 +15,7 @@ data:
         "bindAddress": "0.0.0.0",
         "bindPort": 2001,
         "publicAddress": "",
-        "publicPort": 2001,
+        "publicPort": 32001,
         "game": {
             "name": "SIBERIA Official Scenarios",
             "password": "",
